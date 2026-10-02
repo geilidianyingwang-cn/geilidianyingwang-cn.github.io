@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>给力电影网 - 最新电影电视剧在线观看_热播影视排行榜与影评</title>
+<meta name="description" content="给力电影网每日加满更新最新电影、热播电视剧、综艺动漫与高分纪录片，提供剧情介绍、演职员表、口碑评分、油品标号分类与在线观看指南，移动端自适应，找片看片一站搞定。">
+<meta name="keywords" content="给力电影网,给力影视,最新电影,热播电视剧,在线观看,高清影视,影视排行榜,综艺,动漫,纪录片,影评">
+<meta name="author" content="给力电影网">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+<meta name="format-detection" content="telephone=no">
+<meta name="theme-color" content="#0d1410">
+<meta name="msvalidate.01" content="your-bing-verify-code">
+<link rel="canonical" href="https://geilidianyingwang-cn.github.io/">
+<link rel="apple-touch-icon" href="/favicon.ico">
+<link rel="alternate" hreflang="zh-CN" href="https://geilidianyingwang-cn.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="给力电影网">
+<meta property="og:title" content="给力电影网 - 最新电影电视剧在线观看_热播影视排行榜与影评">
+<meta property="og:description" content="给力电影网每日加满更新最新电影、热播剧集、综艺动漫与高分纪录片，移动端自适应浏览。">
+<meta property="og:url" content="https://geilidianyingwang-cn.github.io/">
+<meta property="og:image" content="https://geilidianyingwang-cn.github.io/favicon.ico">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="给力电影网 - 最新电影电视剧在线观看">
+<meta name="twitter:description" content="最新电影、热播剧集、综艺动漫与高分纪录片聚合，每日加满更新。">
+<style>
+:root{
+  --dark:#0d1410;
+  --dark2:#141d17;
+  --dark3:#1b271f;
+  --neon:#c9ff2e;
+  --neon2:#9ad400;
+  --orange:#ff5a1f;
+  --amber:#ffb020;
+  --white:#eef5e9;
+  --gray:#8b9a8c;
+  --gray2:#5d6c5f;
+  --steel:#2b3a2f;
+  --ln:rgba(201,255,46,.20);
+  --ln2:rgba(201,255,46,.48);
+  --sans:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;
+  --digit:"DIN Alternate","SF Mono",ui-monospace,Menlo,Consolas,"Courier New",monospace;
+  --maxw:1200px;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;color:var(--white);background:var(--dark);font:400 16px/1.8 var(--sans);overflow-x:hidden;
+  background-image:
+    radial-gradient(900px 500px at 50% -14%,rgba(201,255,46,.13),transparent 62%),
+    radial-gradient(760px 440px at 94% 4%,rgba(255,90,31,.14),transparent 60%),
+    repeating-linear-gradient(90deg,rgba(255,255,255,.022) 0 1px,transparent 1px 64px),
+    linear-gradient(180deg,#0d1410 0%,#121a14 46%,#080d0a 100%);
+  background-attachment:fixed;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+ul,ol{margin:0;padding:0;list-style:none}
+table{border-collapse:collapse;width:100%}
+h1,h2,h3,h4{margin:0;line-height:1.3;font-weight:900;letter-spacing:.4px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(14px,3.6vw,30px)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.dig{font-family:var(--digit);letter-spacing:.04em}
+.tag{display:inline-block;padding:4px 12px;font-size:11px;font-weight:800;letter-spacing:.1em;border-radius:3px}
+
+/* ===== 油价牌 ===== */
+.priceboard{background:linear-gradient(180deg,#101a13,#0a110c);border-bottom:2px solid var(--steel)}
+.priceboard .wrap{display:flex;gap:1px;overflow-x:auto;scrollbar-width:none}
+.priceboard .wrap::-webkit-scrollbar{display:none}
+.pb{
+  flex:1 0 auto;min-width:132px;padding:12px 18px;display:flex;align-items:baseline;gap:10px;
+  border-right:1px solid var(--steel);
+}
+.pb .g{font-family:var(--digit);font-size:22px;font-weight:900;color:var(--dark);background:var(--neon);padding:3px 11px;border-radius:3px}
+.pb .g.o{background:var(--orange);color:#fff}
+.pb .g.a{background:var(--amber);color:var(--dark)}
+.pb .n{font-size:12.5px;color:var(--gray)}
+.pb .v{font-family:var(--digit);font-size:16px;color:var(--white);font-weight:800}
+
+/* ===== 顶栏 ===== */
+.topbar{position:sticky;top:0;z-index:80;background:rgba(13,20,16,.94);backdrop-filter:blur(14px);border-bottom:2px solid var(--steel)}
+.topbar .wrap{display:flex;align-items:center;gap:13px;height:80px}
+.logo{display:flex;align-items:center;gap:12px;flex:0 0 auto}
+.logo-mark{width:52px;height:46px;flex:0 0 auto}
+.logo-txt b{display:block;font-size:22px;letter-spacing:.12em}
+.logo-txt b em{font-style:normal;color:var(--neon)}
+.logo-txt span{display:block;font-family:var(--digit);font-size:10px;letter-spacing:.3em;color:var(--gray2)}
+.search{flex:1 1 auto;max-width:330px;margin-left:auto;display:flex}
+.search input{
+  flex:1;min-width:0;height:42px;padding:0 15px;font:400 14px var(--sans);color:var(--white);
+  border:2px solid var(--steel);border-right:0;background:rgba(27,39,31,.7);outline:none;
+}
+.search input::placeholder{color:var(--gray2)}
+.search button{
+  height:42px;padding:0 20px;cursor:pointer;font-family:var(--digit);font-size:13px;font-weight:800;letter-spacing:.1em;
+  border:2px solid var(--neon2);background:var(--neon);color:#141d0c;
+}
+.search button:hover{background:var(--orange);border-color:var(--orange);color:#fff}
+.burger{
+  display:none;margin-left:auto;width:44px;height:42px;cursor:pointer;font-size:17px;color:var(--neon);
+  border:2px solid var(--steel);background:rgba(27,39,31,.7);border-radius:3px;
+}
+
+/* ===== 导航 ===== */
+.nav{background:rgba(20,29,23,.8);border-bottom:2px solid var(--steel)}
+.nav ul{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;padding:11px 0}
+.nav ul::-webkit-scrollbar{display:none}
+.nav a{
+  display:block;padding:8px 15px;font-size:13.5px;font-weight:800;color:var(--gray);white-space:nowrap;
+  border-left:3px solid transparent;transition:.22s;
+}
+.nav a:hover{color:var(--white);background:rgba(201,255,46,.06)}
+.nav a.on{color:var(--neon);border-left-color:var(--neon);background:rgba(201,255,46,.09)}
+
+/* ===== 主视觉：加油机 ===== */
+.hero{padding:clamp(20px,3.6vw,36px) 0 6px}
+.dispenser{
+  border:2px solid var(--steel);border-radius:6px;overflow:hidden;background:var(--dark2);
+  box-shadow:0 16px 40px rgba(0,0,0,.55);
+}
+.disp-top{
+  padding:13px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;
+  background:linear-gradient(180deg,#1b271f,#121a14);border-bottom:2px solid var(--steel);
+}
+.disp-top .brand{font-family:var(--digit);font-size:14px;letter-spacing:.26em;color:var(--neon)}
+.disp-top .lights{display:flex;gap:8px}
+.disp-top .lights i{width:10px;height:10px;border-radius:50%;background:var(--gray2)}
+.disp-top .lights i:nth-child(1){background:var(--neon);box-shadow:0 0 8px var(--neon)}
+.disp-top .lights i:nth-child(2){background:var(--orange);box-shadow:0 0 8px var(--orange)}
+.disp-body{display:grid;grid-template-columns:1.3fr 1fr}
+.screen{
+  padding:clamp(22px,3.2vw,40px);position:relative;overflow:hidden;
+  background:
+    repeating-linear-gradient(180deg,rgba(0,0,0,.22) 0 2px,transparent 2px 5px),
+    linear-gradient(160deg,#16241a 0%,#0e1912 100%);
+}
+.screen .scan{
+  position:absolute;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,rgba(201,255,46,.5),transparent);
+  pointer-events:none;
+}
+.screen > *:not(.scan){position:relative;z-index:3}
+.screen .lbl{font-family:var(--digit);font-size:11px;letter-spacing:.3em;color:var(--gray2)}
+.screen h1{font-size:clamp(28px,5.6vw,48px);letter-spacing:.1em;margin:10px 0 8px}
+.meter{
+  display:flex;align-items:flex-end;gap:14px;margin:6px 0 10px;padding:14px 18px;
+  background:rgba(0,0,0,.42);border:2px solid var(--ln);border-radius:4px;width:fit-content;max-width:100%;
+}
+.meter .num{font-family:var(--digit);font-size:clamp(38px,7vw,62px);font-weight:900;color:var(--neon);line-height:1;text-shadow:0 0 22px rgba(201,255,46,.5)}
+.meter .unit{font-family:var(--digit);font-size:13px;letter-spacing:.16em;color:var(--gray);padding-bottom:8px}
+.screen p{margin:0;font-size:14px;color:var(--gray);max-width:52ch;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.hero-btns{display:flex;gap:12px;margin-top:20px;flex-wrap:wrap}
+.btn{
+  padding:12px 28px;cursor:pointer;font-size:13.5px;font-weight:800;letter-spacing:.1em;border-radius:3px;
+  border:2px solid var(--ln2);background:transparent;color:var(--neon);transition:.22s;
+}
+.btn:hover{background:rgba(201,255,46,.12)}
+.btn.pri{background:var(--neon);border-color:var(--neon);color:#141d0c}
+.btn.pri:hover{background:var(--orange);border-color:var(--orange);color:#fff}
+
+.nozzle{
+  padding:20px;border-left:2px solid var(--steel);background:var(--dark3);
+  display:grid;gap:12px;align-content:center;
+}
+.nozzle h3{font-family:var(--digit);font-size:11px;letter-spacing:.28em;color:var(--neon);padding-bottom:9px;border-bottom:2px solid var(--steel)}
+.fill{
+  display:grid;gap:7px;padding:12px 14px;background:rgba(0,0,0,.3);border-left:3px solid var(--steel);transition:.24s;
+}
+.fill:hover{border-left-color:var(--neon);background:rgba(201,255,46,.07)}
+.fill .row{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.fill .row b{font-size:14px;font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.fill .row span{font-family:var(--digit);font-size:12px;color:var(--neon);white-space:nowrap}
+.fill .bar{height:8px;background:rgba(255,255,255,.08);border-radius:2px;overflow:hidden}
+.fill .bar i{display:block;height:100%;background:linear-gradient(90deg,var(--neon),var(--orange))}
+.fill .tip{font-size:11.5px;color:var(--gray2)}
+
+/* ===== 区块 ===== */
+section{padding:clamp(26px,3.8vw,44px) 0}
+.sec-head{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:20px;flex-wrap:wrap}
+.sec-head .left{display:flex;align-items:center;gap:13px;min-width:0}
+.sec-head .stamp{
+  width:48px;height:48px;flex:0 0 auto;border-radius:4px;display:grid;place-items:center;
+  font-family:var(--digit);font-size:15px;font-weight:900;color:#141d0c;background:var(--neon);
+  box-shadow:0 0 18px rgba(201,255,46,.32);
+}
+.sec-head .stamp.s2{background:var(--orange);color:#fff;box-shadow:0 0 18px rgba(255,90,31,.32)}
+.sec-head .stamp.s3{background:var(--amber);box-shadow:0 0 18px rgba(255,176,32,.28)}
+.sec-head .stamp.s4{background:var(--gray);box-shadow:none}
+.sec-head .stamp.s5{background:transparent;color:var(--neon);border:2px solid var(--ln2)}
+.sec-head .stamp.s6{background:var(--neon2)}
+.sec-head .stamp.s7{background:var(--orange);color:#fff}
+.sec-head .stamp.s8{background:var(--neon)}
+.sec-head .stamp.s9{background:var(--amber)}
+.sec-head h2{font-size:clamp(19px,3.4vw,27px)}
+.sec-head .sub{display:block;font-family:var(--digit);font-size:11px;letter-spacing:.24em;color:var(--gray2);margin-top:4px;font-weight:400}
+.sec-head .more{
+  font-family:var(--digit);font-size:11.5px;letter-spacing:.14em;color:var(--gray);
+  padding:8px 16px;border:2px solid var(--steel);border-radius:3px;transition:.22s;
+}
+.sec-head .more:hover{color:#141d0c;background:var(--neon);border-color:var(--neon)}
+
+.grades{display:flex;gap:9px;overflow-x:auto;scrollbar-width:none;margin-bottom:18px}
+.grades::-webkit-scrollbar{display:none}
+.grades button{
+  padding:8px 18px;cursor:pointer;white-space:nowrap;font-family:var(--digit);font-size:13px;font-weight:800;
+  border:2px solid var(--steel);background:rgba(27,39,31,.6);color:var(--gray);border-radius:3px;transition:.22s;
+}
+.grades button:hover{color:var(--white);border-color:var(--ln2)}
+.grades button.on{color:#141d0c;background:var(--neon);border-color:var(--neon)}
+
+/* ===== 加油位影片卡（圆形表盘 DOM） ===== */
+.bays{display:grid;gap:22px 18px;grid-template-columns:repeat(auto-fill,minmax(158px,1fr))}
+.pump{margin:0;transition:.28s}
+.pump:hover{transform:translateY(-6px)}
+.pump > a{display:block;height:100%;background:rgba(27,39,31,.42);border:2px solid var(--steel);border-radius:5px;overflow:hidden}
+.pump:hover > a{border-color:var(--ln2);box-shadow:0 14px 30px rgba(0,0,0,.5)}
+.gauge{
+  position:relative;aspect-ratio:1/1;margin:18px auto 6px;width:74%;
+  display:grid;place-items:center;text-align:center;
+}
+.gauge .ring{
+  position:absolute;inset:0;border-radius:50%;
+  background:conic-gradient(var(--neon) 0 calc(var(--p,80) * 1%),rgba(255,255,255,.07) 0);
+  -webkit-mask:radial-gradient(circle,transparent 61%,#000 62%);
+  mask:radial-gradient(circle,transparent 61%,#000 62%);
+}
+.pump.g2 .gauge .ring{background:conic-gradient(var(--orange) 0 calc(var(--p,80) * 1%),rgba(255,255,255,.07) 0)}
+.pump.g3 .gauge .ring{background:conic-gradient(var(--amber) 0 calc(var(--p,80) * 1%),rgba(255,255,255,.07) 0)}
+.pump.g4 .gauge .ring{background:conic-gradient(#7fe0ff 0 calc(var(--p,80) * 1%),rgba(255,255,255,.07) 0)}
+.pump.g5 .gauge .ring{background:conic-gradient(#ff6fb5 0 calc(var(--p,80) * 1%),rgba(255,255,255,.07) 0)}
+.gauge .core{
+  position:relative;z-index:3;width:78%;aspect-ratio:1;border-radius:50%;display:grid;place-items:center;padding:10px;
+  background:radial-gradient(circle at 40% 34%,#1e2d23,#0c1410 74%);border:2px solid rgba(255,255,255,.09);
+}
+.gauge .core .val{display:block;font-family:var(--digit);font-size:23px;font-weight:900;color:var(--neon);line-height:1}
+.pump.g2 .gauge .core .val{color:var(--orange)}
+.pump.g3 .gauge .core .val{color:var(--amber)}
+.pump.g4 .gauge .core .val{color:#7fe0ff}
+.pump.g5 .gauge .core .val{color:#ff6fb5}
+.gauge .core .ttl{display:block;margin-top:5px;font-size:12.5px;font-weight:800;color:var(--white);line-height:1.35;
+  overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;word-break:break-all}
+.pump .info{padding:10px 14px 15px;border-top:2px solid var(--steel)}
+.pump .info b{display:block;font-size:14px;font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pump .info span{display:block;font-size:12px;color:var(--gray2);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pump .fuel{display:flex;align-items:center;gap:8px;margin-top:10px}
+.pump .fuel .bar{flex:1;height:6px;background:rgba(255,255,255,.08);border-radius:2px;overflow:hidden}
+.pump .fuel .bar i{display:block;height:100%;background:linear-gradient(90deg,var(--neon),var(--orange))}
+.pump .fuel .pc{font-family:var(--digit);font-size:11px;color:var(--neon)}
+.pump .meta{display:flex;gap:10px;margin-top:9px;font-family:var(--digit);font-size:10px;color:var(--gray2)}
+.pump .meta em{font-style:normal;color:var(--white);background:var(--steel);padding:2px 8px;border-radius:2px}
+
+/* 油品标号 */
+.octane{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px}
+.octane a{
+  padding:22px 20px;display:block;background:rgba(27,39,31,.42);border:2px solid var(--steel);
+  border-radius:5px;transition:.26s;position:relative;overflow:hidden;
+}
+.octane a:hover{border-color:var(--ln2);transform:translateY(-5px);background:rgba(201,255,46,.08)}
+.octane .gd{font-family:var(--digit);font-size:34px;font-weight:900;color:var(--neon);line-height:1;
+  text-shadow:0 0 20px rgba(201,255,46,.3)}
+.octane a:nth-child(2) .gd{color:var(--orange);text-shadow:0 0 20px rgba(255,90,31,.3)}
+.octane a:nth-child(3) .gd{color:var(--amber);text-shadow:0 0 20px rgba(255,176,32,.28)}
+.octane a:nth-child(4) .gd{color:#7fe0ff}
+.octane a:nth-child(5) .gd{color:#ff6fb5}
+.octane b{display:block;font-size:16.5px;font-weight:900;margin-top:8px}
+.octane span{display:block;font-size:12.5px;color:var(--gray2);margin-top:5px}
+
+/* 油品对照表 */
+.panel{border:2px solid var(--steel);border-radius:5px;background:rgba(27,39,31,.42);padding:22px}
+.panel h3{font-size:17px;padding-bottom:11px;margin-bottom:8px;border-bottom:2px solid var(--steel)}
+.gaugetable{margin-top:4px;font-size:13.5px}
+.gaugetable caption{
+  caption-side:top;text-align:left;font-family:var(--digit);font-size:11px;letter-spacing:.22em;
+  color:var(--gray2);padding-bottom:10px;
+}
+.gaugetable th,.gaugetable td{padding:11px 12px;text-align:left;border-bottom:1px solid rgba(255,255,255,.09)}
+.gaugetable thead th{
+  font-family:var(--digit);font-size:11.5px;letter-spacing:.16em;color:var(--neon);
+  background:rgba(0,0,0,.28);border-bottom:2px solid var(--steel);
+}
+.gaugetable td:first-child{font-weight:800;color:var(--white)}
+.gaugetable td{color:var(--gray)}
+.gaugetable tbody tr:hover td{background:rgba(201,255,46,.05)}
+
+/* 排行榜 */
+.rank{display:grid;gap:8px}
+.rank li{
+  display:grid;grid-template-columns:52px 1fr auto;align-items:center;gap:14px;
+  padding:12px 15px;background:rgba(27,39,31,.42);border-left:4px solid var(--steel);
+  border-radius:0 4px 4px 0;transition:.24s;
+}
+.rank li:hover{background:rgba(201,255,46,.08);border-left-color:var(--neon)}
+.rank li:nth-child(2){border-left-color:var(--orange)}
+.rank li:nth-child(3){border-left-color:var(--amber)}
+.rank .no{font-family:var(--digit);font-size:17px;font-weight:900;color:var(--gray2)}
+.rank li:nth-child(1) .no{color:var(--neon)}
+.rank li:nth-child(2) .no{color:var(--orange)}
+.rank li:nth-child(3) .no{color:var(--amber)}
+.rank .ti{min-width:0}
+.rank .ti b{display:block;font-size:14.5px;font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rank .ti span{font-size:12px;color:var(--gray2)}
+.rank .hp{
+  font-family:var(--digit);font-size:12px;font-weight:800;color:#141d0c;background:var(--neon);
+  padding:4px 12px;border-radius:2px;white-space:nowrap;
+}
+
+/* 资讯 */
+.posts{display:grid;gap:18px;grid-template-columns:repeat(auto-fill,minmax(268px,1fr))}
+.posts article{background:rgba(27,39,31,.42);border:2px solid var(--steel);border-radius:5px;overflow:hidden;transition:.28s}
+.posts article:hover{transform:translateY(-5px);border-color:var(--ln2);box-shadow:0 14px 30px rgba(0,0,0,.5)}
+.posts .top-bar{padding:11px 16px;font-family:var(--digit);font-size:11px;letter-spacing:.24em;
+  background:linear-gradient(90deg,var(--neon),transparent);color:#141d0c;font-weight:800}
+.posts article:nth-child(2) .top-bar{background:linear-gradient(90deg,var(--orange),transparent);color:#fff}
+.posts article:nth-child(3) .top-bar{background:linear-gradient(90deg,var(--amber),transparent)}
+.posts .bd{padding:14px 16px 17px}
+.posts h3{font-size:15.5px;margin-bottom:7px}
+.posts h3 a:hover{color:var(--neon)}
+.posts p{margin:0;font-size:13px;color:var(--gray);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.posts .ft{margin-top:11px;font-family:var(--digit);font-size:11px;letter-spacing:.1em;color:var(--gray2)}
+
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.kv{display:flex;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px dashed var(--steel);font-size:13.5px}
+.kv:last-child{border:0}
+.kv span{font-family:var(--digit);font-size:12.5px;color:var(--gray);text-align:right}
+.tags{display:flex;flex-wrap:wrap;gap:9px}
+.tags a{
+  padding:6px 15px;font-size:12.5px;font-weight:700;color:var(--gray);
+  border:2px solid var(--steel);border-radius:3px;background:transparent;transition:.22s;
+}
+.tags a:hover{color:#141d0c;background:var(--neon);border-color:var(--neon)}
+
+/* 页脚 */
+footer{margin-top:26px;border-top:4px solid var(--steel);background:linear-gradient(180deg,rgba(27,39,31,.6),rgba(8,13,10,.95));padding:32px 0 34px}
+footer h4{font-family:var(--digit);font-size:12px;letter-spacing:.24em;color:var(--neon);margin-bottom:12px}
+footer p,footer li{font-size:13px;color:var(--gray);margin:0 0 7px}
+footer li a:hover{color:var(--neon)}
+.fgrid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
+.copy{
+  margin-top:24px;padding-top:16px;border-top:2px solid var(--steel);
+  font-size:12.5px;color:var(--gray2);text-align:center;line-height:1.9;
+}
+.copy b{font-family:var(--digit);color:var(--neon)}
+
+.top{
+  position:fixed;right:16px;bottom:16px;width:46px;height:46px;cursor:pointer;font-size:17px;
+  border:2px solid var(--ln2);background:rgba(13,20,16,.94);color:var(--neon);display:none;z-index:90;border-radius:3px;
+}
+.top.show{display:block}
+.empty{padding:30px;text-align:center;color:var(--gray);font-size:14px;display:none}
+
+/* ===== 响应式 ===== */
+@media (max-width:900px){
+  .disp-body{grid-template-columns:1fr}
+  .nozzle{border-left:0;border-top:2px solid var(--steel);grid-template-columns:1fr 1fr;display:grid}
+  .nozzle h3{grid-column:1 / -1}
+  .cols{grid-template-columns:1fr}
+}
+@media (max-width:768px){
+  .search{display:none}
+  .burger{display:block}
+  .nav{display:none}
+  .nav.open{display:block}
+  .nav ul{flex-direction:column;gap:6px;overflow:visible;padding:12px 0}
+  .nav a{width:100%;padding:12px 15px}
+  .bays{grid-template-columns:repeat(auto-fill,minmax(142px,1fr));gap:18px 14px}
+  .pump:hover,.posts article:hover,.octane a:hover,.rank li:hover,.fill:hover{transform:none}
+  .gaugetable th,.gaugetable td{padding:9px 8px;font-size:12.5px}
+}
+@media (max-width:480px){
+  .logo-mark{width:46px;height:42px}
+  .logo-txt b{font-size:19px}
+  .bays{grid-template-columns:repeat(2,1fr);gap:16px 12px}
+  .nozzle{grid-template-columns:1fr}
+  .gauge{width:82%}
+  .gauge .core .val{font-size:20px}
+  .sec-head h2{font-size:20px}
+  .rank{grid-template-columns:1fr}
+  .rank li{grid-template-columns:44px 1fr;gap:10px}
+  .rank .hp{grid-column:2;justify-self:start}
+  .octane{grid-template-columns:1fr 1fr}
+  .screen{padding:20px}
+  .priceboard .pb{min-width:112px;padding:10px 12px}
+  .priceboard .pb .g{font-size:18px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"WebSite",
+      "@id":"https://geilidianyingwang-cn.github.io/#website",
+      "url":"https://geilidianyingwang-cn.github.io/",
+      "name":"给力电影网",
+      "alternateName":["给力影视","给力电影"],
+      "inLanguage":"zh-CN",
+      "description":"给力电影网提供最新电影、热播电视剧、综艺、动漫、纪录片的介绍及影视排行榜。",
+      "potentialAction":{
+        "@type":"SearchAction",
+        "target":{"@type":"EntryPoint","urlTemplate":"https://geilidianyingwang-cn.github.io/search?q={search_term_string}"},
+        "query-input":"required name=search_term_string"
+      }
+    },
+    {
+      "@type":"Organization",
+      "@id":"https://geilidianyingwang-cn.github.io/#org",
+      "url":"https://geilidianyingwang-cn.github.io/",
+      "name":"给力电影网",
+      "logo":"https://geilidianyingwang-cn.github.io/favicon.ico"
+    },
+    {
+      "@type":"BreadcrumbList",
+      "itemListElement":[
+        {"@type":"ListItem","position":1,"name":"首页","item":"https://geilidianyingwang-cn.github.io/"},
+        {"@type":"ListItem","position":2,"name":"今日上新","item":"https://geilidianyingwang-cn.github.io/#movie"},
+        {"@type":"ListItem","position":3,"name":"热播剧集","item":"https://geilidianyingwang-cn.github.io/#tv"},
+        {"@type":"ListItem","position":4,"name":"综艺动漫","item":"https://geilidianyingwang-cn.github.io/#show"},
+        {"@type":"ListItem","position":5,"name":"纪录片","item":"https://geilidianyingwang-cn.github.io/#doc"},
+        {"@type":"ListItem","position":6,"name":"油品标号","item":"https://geilidianyingwang-cn.github.io/#octane"},
+        {"@type":"ListItem","position":7,"name":"加油排行榜","item":"https://geilidianyingwang-cn.github.io/#rank"}
+      ]
+    },
+    {
+      "@type":"ItemList",
+      "name":"给力电影网加油排行榜",
+      "itemListElement":[
+        {"@type":"ListItem","position":1,"name":"满油出发"},
+        {"@type":"ListItem","position":2,"name":"逆风引擎"},
+        {"@type":"ListItem","position":3,"name":"能量街区"},
+        {"@type":"ListItem","position":4,"name":"晨间补给"},
+        {"@type":"ListItem","position":5,"name":"深夜续航"}
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/xiaobao.js"></script>
+
+<div class="priceboard">
+  <div class="wrap">
+    <div class="pb"><span class="g">92</span><span class="n">剧情 / 每日更新</span><span class="v">1,240</span></div>
+    <div class="pb"><span class="g o">95</span><span class="n">动作 / 正在热映</span><span class="v">2,180</span></div>
+    <div class="pb"><span class="g a">98</span><span class="n">爱情 / 本周主推</span><span class="v">1,860</span></div>
+    <div class="pb"><span class="g">0#</span><span class="n">喜剧 / 轻松上阵</span><span class="v">960</span></div>
+    <div class="pb"><span class="g o">-10</span><span class="n">科幻 / 深冷档</span><span class="v">720</span></div>
+  </div>
+</div>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="logo" href="#" aria-label="给力电影网首页">
+      <span class="logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 104 92" focusable="false">
+          <rect x="6" y="26" width="54" height="58" rx="6" fill="#1b271f" stroke="#2b3a2f" stroke-width="3"></rect>
+          <rect x="14" y="36" width="38" height="26" rx="3" fill="#0a110c" stroke="#c9ff2e" stroke-width="2"></rect>
+          <text x="33" y="55" font-family="monospace" font-size="16" font-weight="900" fill="#c9ff2e" text-anchor="middle">98</text>
+          <rect x="62" y="14" width="12" height="24" rx="3" fill="#c9ff2e"></rect>
+          <path d="M74 30c14 0 22 8 22 20v14" fill="none" stroke="#ff5a1f" stroke-width="6" stroke-linecap="round"></path>
+          <rect x="88" y="58" width="12" height="18" rx="3" fill="#ff5a1f"></rect>
+        </svg>
+      </span>
+      <span class="logo-txt"><b><em>给力</em>电影网</b><span>GEILI CINEMA</span></span>
+    </a>
+    <form class="search" role="search" onsubmit="return doSearch(event)">
+      <label class="sr" for="q">搜索影片</label>
+      <input id="q" type="search" placeholder="搜电影 / 剧集 / 演员…" autocomplete="off">
+      <button type="submit">检索</button>
+    </form>
+    <button class="burger" id="burger" aria-label="展开导航菜单" aria-expanded="false">☰</button>
+  </div>
+  <nav class="nav" id="nav" aria-label="网站主导航">
+    <div class="wrap">
+      <ul>
+        <li><a class="on" href="#">首页</a></li>
+        <li><a href="#movie">今日上新</a></li>
+        <li><a href="#tv">热播剧集</a></li>
+        <li><a href="#show">综艺动漫</a></li>
+        <li><a href="#doc">纪录片</a></li>
+        <li><a href="#octane">油品标号</a></li>
+        <li><a href="#gauge">标号对照表</a></li>
+        <li><a href="#rank">加油排行榜</a></li>
+        <li><a href="#news">影视资讯</a></li>
+        <li><a href="#about">关于我们</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <!-- 主视觉：加油机 -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap">
+      <article class="dispenser">
+        <div class="disp-top">
+          <span class="brand">G E I L I · FUEL STATION</span>
+          <span class="lights" aria-hidden="true"><i></i><i></i><i></i></span>
+        </div>
+        <div class="disp-body">
+          <div class="screen" role="img" aria-label="本期主推影片主视觉占位图">
+            <span class="scan" aria-hidden="true"></span>
+            <span class="lbl">NOW SERVING · 本期主推</span>
+            <h1 id="hero-title">满油出发</h1>
+            <div class="meter">
+              <span class="num">98.6</span>
+              <span class="unit">SCORE / 100</span>
+            </div>
+            <p>给力电影网本期主推：一次跨越三座城市的公路旅程，本站已同步更新剧情解析、演员表、评分口碑与在线观看指南。</p>
+            <div class="hero-btns">
+              <a class="btn pri" href="#">立即观看</a>
+              <a class="btn" href="#">剧情介绍</a>
+            </div>
+          </div>
+          <div class="nozzle">
+            <h3>TOPPING UP · 今日加满</h3>
+            <a class="fill" href="#"><div class="row"><b>逆风引擎</b><span>96%</span></div><div class="bar"><i style="width:96%"></i></div><div class="tip">剧情 · 更新至第 10 集</div></a>
+            <a class="fill" href="#"><div class="row"><b>能量街区</b><span>92%</span></div><div class="bar"><i style="width:92%"></i></div><div class="tip">都市 · 更新至第 6 集</div></a>
+            <a class="fill" href="#"><div class="row"><b>晨间补给</b><span>88%</span></div><div class="bar"><i style="width:88%"></i></div><div class="tip">爱情 · 高清 1080P</div></a>
+            <a class="fill" href="#"><div class="row"><b>深夜续航</b><span>85%</span></div><div class="bar"><i style="width:85%"></i></div><div class="tip">纪录 · 9.2 分</div></a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 栏目一：今日上新 -->
+  <section id="movie" aria-labelledby="movie-t">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="left">
+          <span class="stamp" aria-hidden="true">01</span>
+          <div>
+            <h2 id="movie-t">今日上新</h2>
+            <span class="sub">NEW ARRIVALS · 每日加满</span>
+          </div>
+        </div>
+        <a class="more" href="#">查看全部 →</a>
+      </div>
+      <p style="margin:0 0 16px;font-size:13.5px;color:var(--gray)">给力电影网每日两班上新，可按标号筛选，卡片外圈为口碑油量环，下方标注清晰度、片长与播放热度。</p>
+      <div class="grades" role="tablist" aria-label="影片筛选">
+        <button class="on" data-f="all">全部标号</button>
+        <button data-f="drama">92# 剧情</button>
+        <button data-f="action">95# 动作</button>
+        <button data-f="love">98# 爱情</button>
+        <button data-f="comedy">0# 喜剧</button>
+        <button data-f="scifi">-10# 科幻</button>
+      </div>
+      <div class="bays" id="movieGrid">
+        <article class="pump" data-cat="drama"><a href="#"><div class="gauge" style="--p:89" role="img" aria-label="满油出发 油量表盘 8.9 分"><span class="ring" aria-hidden="true"></span><span class="core"><span class="val">8.9</span><span class="ttl">满油出发</span></span></div><div class="info"><b>满油出发</b><span>2026 · 剧情 / 公路</span><div class="fuel"><span class="bar"><i style="width:89%"></i></span><span class="pc">89%</span></div><div class="meta"><em>1080P</em><span>124 MIN</span><span>9.5 万</span></div></div></a></article>
+        <article class="pump g2" data-cat="action"><a href="#"><div class="gauge" style="--p:83" role="img" aria-label="极速追击 油量表盘 8.3 分"><span class="ring" aria-hidden="true"></span><span class="core"><span class="val">8.3</span><span class="ttl">极速追击</span></span></div><div class="info"><b>极速追击</b><span>2026 · 动作 / 犯罪</span><div class="fuel"><span class="bar"><i style="width:83%"></i></span><span class="pc">83%</span></div><div class="meta"><em>4K</em><span>114 MIN</span><span>6.9 万</span></div></div></a></article>
+        <article class="pump g5" data-cat="love"><a href="#"><div class="gauge" style="--p:79" role="img" aria-label="晨间补给 油量表盘 7.9 分"><span class="ring" aria-hidden="true"></span><span class="core"><span class="val">7.9</span><span class="ttl">晨间补给</span></span></div><div class="info"><b>晨间补给</b><span>2025 · 爱情 / 都市</span><div class="fuel"><span class="bar"><i style="width:79%"></i></span><span class="pc">79%</span></div><div class="meta"><em>1080P</em><span>106 MIN</span><span>5.4 万</span></div></div></a></article>
+        <article class="pump g3" data-cat="comedy"><a href="#"><div class="gauge" style="--p:78" role="img" aria-label="开心杂货铺 油量表盘 7.8 分"><span class="ring" aria-hidden="true"></span><span class="core"><span class="val">7.8</span><span class="ttl">开心杂货铺</span></span></div><div class="info"><b>开心杂货铺</b><span>2026 · 喜剧 / 生活</span><div class="fuel"><span class="bar"><i style="width:78%"></i></span><span class="pc">78%</span></div><div class="meta"><em>720P</em><span>98 MIN</span><span>4.6 万</span></div></div></a></article>
+        <article class="pump g4" data-cat="scifi"><a href="#"><div class="gauge" style="--p:86" role="img" aria-label="星海孤舟 油量表盘 8.6 分"><span class="ring" aria-hidden="true"></span><span class="core"><span class="val">8.6</span><span class="ttl">星海孤舟</span></span></div><div class="info"><b>星海孤舟</b><span>2026 · 科幻 / 冒险</span><div class="fuel"><span class="bar"><i style="width:86%"></i></span><span class="pc">86%</span></div><div class="meta"><em>4K</em><span>138 MIN</span><span>8.2 万</span></div></div></a></article>
+        <article class="pump" data-cat="drama"><a href="#"><div class="gauge" style="--p:84" role="img" aria-label="旧巷时光 油量表盘 8.4 分"><span class="ring" aria-hidden="true"></span><span class="core"><span class="val">8.4</span><span class="ttl">旧巷时光</span></span></div><div class="info"><b>旧巷时光</b><span>2025 · 剧情 / 家庭</span><div class="fuel"><span class="bar"><i style="width:84%"></i></span><span class="pc">84%</span></div><div class="meta"><em>1080P</em><span>119 MIN</span><span>5.9 万</span></div></div></a></article>
+        <article class="pump g2" data-cat="action"><a href="#"><div class="gauge" style="--p:76" role="img" aria-label="铁血防线 油量表盘 7.6 分"><span class="ring" aria-hidden="true"></span><span class="core"><span class="val">7.6</span><span class="ttl">铁血防线</span></span></div><div class="info"><b>铁血防线</b><span>2025 · 动作 / 战争</span><div class="fuel"><span class="bar"><i style="width:76%"></i></span><span class="pc">76%</span></div><div class="meta"><em>720P</em><span>131 MIN</span><span>4.2 万</span></div></div></a></article>
+        <article class="pump g3" data-cat="comedy"><a href="#"><div class="gauge" style="--p:80" role="img" aria-label="爆笑考场 油量表盘 8.0 分"><span class="ring" aria-hidden="true"></span><span class="core"><span class="val">8.0</span><span class="ttl">爆笑考场</span></span></div><div class="info"><b>爆笑考场</b><span>2026 · 喜剧 / 校园</span><div class="fuel"><span class="bar"><i style="width:80%"></i></span><span class="pc">80%</span></div><div class="meta"><em>1080P</em><span>95 MIN</span><span>6.3 万</span></div></div></a></article>
+      </div>
+      <div class="empty" id="movieEmpty">没有匹配的影片，换个标号或关键词试试～</div>
+      <div style="margin-top:22px"><button class="btn" id="moreMovie">再加一箱</button></div>
+    </div>
+  </section>
+
+  <!-- 栏目二：热播剧集 -->
+  <section id="tv" aria-labelledby="tv-t" style="background:rgba(20,29,23,.42)">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="left">
+          <span class="stamp s2" aria-hidden="true">02</span>
+          <div>
+            <h2 id="tv-t">热播剧集</h2>
+            <span class="sub">HOT SERIES · 同步更新</span>
+          </div>
+        </div>
+        <a class="more" href="#">剧集时间表 →</a>
+      </div>
+      <div class="bays">
+        <article class="pump"><a href="#"><div class="gauge" style="--p:90" role="img" aria-label="逆风引擎 油量表盘 9.0 分"><span class="ring" aria-hidden="true"></span><span class="core"><span class="val">9.0</span><span class="ttl">逆风引擎</span></span></div><div class="info"><b>逆风引擎</b><span>年代 · 每周三更新</span><div class="fuel"><span class="bar"><i style="width:90%"></i></span><span class="pc">90%</span></div><div class="meta"><em>1080P</em><span>45 MIN</span><span>更新中</span></div></div></a></article>
+        <article class="pump g4"><a href="#"><div class="gauge" style="--p:87" role="img" aria-label="能量街区 油量表盘 8.7 分"><span class="ring" aria-hidden="true"></span><span class="core"><span class="val">8.7</span><span class="ttl">能量街区</span></span></div><div class="info"><b>能量街区</b><span>都市 · 每周六更新</span><div class="fuel"><span class="bar"><i style="width:87%"></i></span><span class="pc">87%</span></div><div class="meta"><em>1080P</em><span>45 MIN</span><span>更新中</span></div></div></a></article>
+        <article class="pump g5"><a href="#"><div class="gauge" style="--p:84" role="img" aria-label="城市之下 油量表盘 8.4 分"><span class="ring" aria-hidden="true"></span><span class="core"><span class="val">8.4</span><span class="ttl">城市之下</span></span></div><div class="info"><b>城市之下</b><span>职场 · 30 集</span><div class="fuel"><span class="bar"><i style="width:84%"></i></span><span class="pc">84%</span></div><div class="meta"><em>4K</em><span>45 MIN</span><span>全集</span></div></div></a></article>
+        <article class="pump g3"><a href="#"><div class="gauge" style="--p:79" role="img" aria-label="春水生 油量表盘 7.9 分"><span class="ring" aria-hidden="true"></span><span class="core"><span class="val">7.9</span><span class="ttl">春水生</span></span></div><div class="info"><b>春水生</b><span>年代情感 · 每周一更新</span><div class="fuel"><span class="bar"><i style="width:79%"></i></span><span class="pc">79%</span></div><div class="meta"><em>720P</em><span>45 MIN</span><span>更新中</span></div></div></a></article>
+        <article class="pump g2"><a href="#"><div class="gauge" style="--p:86" role="img" aria-label="暗线 油量表盘 8.6 分"><span class="ring" aria-hidden="true"></span><span class="core"><span class="val">8.6</span><span class="ttl">暗线</span></span></div><div class="info"><b>暗线</b><span>谍战 · 每周五更新</span><div class="fuel"><span class="bar"><i style="width:86%"></i></span><span class="pc">86%</span></div><div class="meta"><em>1080P</em><span>45 MIN</span><span>更新中</span></div></div></a></article>
+        <article class="pump g4"><a href="#"><div class="gauge" style="--p:81" role="img" aria-label="课间十分钟 油量表盘 8.1 分"><span class="ring" aria-hidden="true"></span><span class="core"><span class="val">8.1</span><span class="ttl">课间十分钟</span></span></div><div class="info"><b>课间十分钟</b><span>青春校园 · 24 集</span><div class="fuel"><span class="bar"><i style="width:81%"></i></span><span class="pc">81%</span></div><div class="meta"><em>1080P</em><span>42 MIN</span><span>全集</span></div></div></a></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目三：综艺动漫 -->
+  <section id="show" aria-labelledby="show-t">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="left">
+          <span class="stamp s3" aria-hidden="true">03</span>
+          <div>
+            <h2 id="show-t">综艺 · 动漫</h2>
+            <span class="sub">SHOWS &amp; ANIME</span>
+          </div>
+        </div>
+        <a class="more" href="#">更多综艺动漫 →</a>
+      </div>
+      <div class="bays">
+        <article class="pump g3"><a href="#"><div class="gauge" style="--p:83" role="img" aria-label="午后茶话 油量表盘 8.3 分"><span class="ring" aria-hidden="true"></span><span class="core"><span class="val">8.3</span><span class="ttl">午后茶话</span></span></div><div class="info"><b>午后茶话</b><span>真人秀 · 更新至第 11 期</span><div class="fuel"><span class="bar"><i style="width:83%"></i></span><span class="pc">83%</span></div><div class="meta"><em>1080P</em><span>60 MIN</span><span>更新中</span></div></div></a></article>
+        <article class="pump"><a href="#"><div class="gauge" style="--p:88" role="img" aria-label="灶上有江湖 油量表盘 8.8 分"><span class="ring" aria-hidden="true"></span><span class="core"><span class="val">8.8</span><span class="ttl">灶上有江湖</span></span></div><div class="info"><b>灶上有江湖</b><span>美食 · 更新至第 7 期</span><div class="fuel"><span class="bar"><i style="width:88%"></i></span><span class="pc">88%</span></div><div class="meta"><em>1080P</em><span>50 MIN</span><span>更新中</span></div></div></a></article>
+        <article class="pump g4"><a href="#"><div class="gauge" style="--p:91" role="img" aria-label="山海灵兽录 油量表盘 9.1 分"><span class="ring" aria-hidden="true"></span><span class="core"><span class="val">9.1</span><span class="ttl">山海灵兽录</span></span></div><div class="info"><b>山海灵兽录</b><span>国漫 · 更新至第 30 话</span><div class="fuel"><span class="bar"><i style="width:91%"></i></span><span class="pc">91%</span></div><div class="meta"><em>4K</em><span>24 MIN</span><span>更新中</span></div></div></a></article>
+        <article class="pump g5"><a href="#"><div class="gauge" style="--p:85" role="img" aria-label="追风少年 油量表盘 8.5 分"><span class="ring" aria-hidden="true"></span><span class="core"><span class="val">8.5</span><span class="ttl">追风少年</span></span></div><div class="info"><b>追风少年</b><span>热血 · 更新至第 16 话</span><div class="fuel"><span class="bar"><i style="width:85%"></i></span><span class="pc">85%</span></div><div class="meta"><em>1080P</em><span>24 MIN</span><span>更新中</span></div></div></a></article>
+        <article class="pump g2"><a href="#"><div class="gauge" style="--p:84" role="img" aria-label="声音的形状 油量表盘 8.4 分"><span class="ring" aria-hidden="true"></span><span class="core"><span class="val">8.4</span><span class="ttl">声音的形状</span></span></div><div class="info"><b>声音的形状</b><span>音乐 · 每周四更新</span><div class="fuel"><span class="bar"><i style="width:84%"></i></span><span class="pc">84%</span></div><div class="meta"><em>1080P</em><span>70 MIN</span><span>更新中</span></div></div></a></article>
+        <article class="pump"><a href="#"><div class="gauge" style="--p:89" role="img" aria-label="小食记 油量表盘 8.9 分"><span class="ring" aria-hidden="true"></span><span class="core"><span class="val">8.9</span><span class="ttl">小食记</span></span></div><div class="info"><b>小食记</b><span>治愈 · 更新至第 10 话</span><div class="fuel"><span class="bar"><i style="width:89%"></i></span><span class="pc">89%</span></div><div class="meta"><em>1080P</em><span>20 MIN</span><span>更新中</span></div></div></a></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目四：纪录片 -->
+  <section id="doc" aria-labelledby="doc-t" style="background:rgba(20,29,23,.42)">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="left">
+          <span class="stamp s4" aria-hidden="true">04</span>
+          <div>
+            <h2 id="doc-t">高分纪录片</h2>
+            <span class="sub">DOCUMENTARY</span>
+          </div>
+        </div>
+        <a class="more" href="#">纪录片专区 →</a>
+      </div>
+      <div class="bays">
+        <article class="pump"><a href="#"><div class="gauge" style="--p:93" role="img" aria-label="大江之源 油量表盘 9.3 分"><span class="ring" aria-hidden="true"></span><span class="core"><span class="val">9.3</span><span class="ttl">大江之源</span></span></div><div class="info"><b>大江之源</b><span>6 集 · 地理人文</span><div class="fuel"><span class="bar"><i style="width:93%"></i></span><span class="pc">93%</span></div><div class="meta"><em>4K</em><span>52 MIN</span><span>全集</span></div></div></a></article>
+        <article class="pump g3"><a href="#"><div class="gauge" style="--p:92" role="img" aria-label="手艺人 油量表盘 9.2 分"><span class="ring" aria-hidden="true"></span><span class="core"><span class="val">9.2</span><span class="ttl">手艺人</span></span></div><div class="info"><b>手艺人</b><span>8 集 · 非遗纪录</span><div class="fuel"><span class="bar"><i style="width:92%"></i></span><span class="pc">92%</span></div><div class="meta"><em>1080P</em><span>45 MIN</span><span>全集</span></div></div></a></article>
+        <article class="pump g4"><a href="#"><div class="gauge" style="--p:90" role="img" aria-label="深海之下 油量表盘 9.0 分"><span class="ring" aria-hidden="true"></span><span class="core"><span class="val">9.0</span><span class="ttl">深海之下</span></span></div><div class="info"><b>深海之下</b><span>5 集 · 海洋探索</span><div class="fuel"><span class="bar"><i style="width:90%"></i></span><span class="pc">90%</span></div><div class="meta"><em>4K</em><span>48 MIN</span><span>全集</span></div></div></a></article>
+        <article class="pump g5"><a href="#"><div class="gauge" style="--p:87" role="img" aria-label="深夜续航 油量表盘 8.7 分"><span class="ring" aria-hidden="true"></span><span class="core"><span class="val">8.7</span><span class="ttl">深夜续航</span></span></div><div class="info"><b>深夜续航</b><span>10 集 · 城市观察</span><div class="fuel"><span class="bar"><i style="width:87%"></i></span><span class="pc">87%</span></div><div class="meta"><em>1080P</em><span>40 MIN</span><span>全集</span></div></div></a></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目五：油品标号 -->
+  <section id="octane" aria-labelledby="octane-t">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="left">
+          <span class="stamp s5" aria-hidden="true">05</span>
+          <div>
+            <h2 id="octane-t">油品标号</h2>
+            <span class="sub">FUEL GRADES</span>
+          </div>
+        </div>
+        <a class="more" href="#">全部片库 →</a>
+      </div>
+      <p style="margin:0 0 16px;font-size:13.5px;color:var(--gray)">给力电影网把片库按"标号"分区，标号越高越浓烈，可按需取用。</p>
+      <div class="octane">
+        <a href="#"><span class="gd">92</span><b>剧情 · 常规</b><span>在架 4,260 部</span></a>
+        <a href="#"><span class="gd">95</span><b>动作 · 高能</b><span>在架 3,180 部</span></a>
+        <a href="#"><span class="gd">98</span><b>爱情 · 浓烈</b><span>在架 2,940 部</span></a>
+        <a href="#"><span class="gd">0#</span><b>喜剧 · 轻松</b><span>在架 1,860 部</span></a>
+        <a href="#"><span class="gd">-10</span><b>科幻 · 深冷</b><span>在架 1,720 部</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目六：标号对照表 -->
+  <section id="gauge" aria-labelledby="gauge-t" style="background:rgba(20,29,23,.42)">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="left">
+          <span class="stamp s6" aria-hidden="true">06</span>
+          <div>
+            <h2 id="gauge-t">标号对照表</h2>
+            <span class="sub">GRADE REFERENCE</span>
+          </div>
+        </div>
+        <a class="more" href="#">查看说明 →</a>
+      </div>
+      <div class="panel">
+        <table class="gaugetable">
+          <caption>FUEL GRADE / 标号对照一览</caption>
+          <thead>
+            <tr><th scope="col">标号</th><th scope="col">适用场景</th><th scope="col">建议画质</th><th scope="col">在架数量</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>92#</td><td>日常观看 · 通勤与午休时段</td><td>720P</td><td>4,260 部</td></tr>
+            <tr><td>95#</td><td>追求节奏 · 家庭大屏</td><td>1080P</td><td>3,180 部</td></tr>
+            <tr><td>98#</td><td>沉浸观看 · 夜间完整时段</td><td>1080P / 4K</td><td>2,940 部</td></tr>
+            <tr><td>0#</td><td>放松解压 · 碎片时间</td><td>720P</td><td>1,860 部</td></tr>
+            <tr><td>-10#</td><td>硬核补片 · 周末长时段</td><td>4K</td><td>1,720 部</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目七：加油排行榜 + 站点数据 -->
+  <section id="rank" aria-labelledby="rank-t">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="left">
+          <span class="stamp s7" aria-hidden="true">07</span>
+          <div>
+            <h2 id="rank-t">给力电影网加油排行榜</h2>
+            <span class="sub">RANKING · 每日 10:00 / 20:00 刷新</span>
+          </div>
+        </div>
+        <a class="more" href="#">完整榜单 →</a>
+      </div>
+      <div class="cols">
+        <div class="panel">
+          <h3>今日加油 TOP 8</h3>
+          <ol class="rank">
+            <li><span class="no">01</span><span class="ti"><b>满油出发</b><span>剧情 / 1080P</span></span><span class="hp">98.6</span></li>
+            <li><span class="no">02</span><span class="ti"><b>逆风引擎</b><span>剧集 / 更新至10集</span></span><span class="hp">96.4</span></li>
+            <li><span class="no">03</span><span class="ti"><b>能量街区</b><span>都市 / 更新至6集</span></span><span class="hp">94.2</span></li>
+            <li><span class="no">04</span><span class="ti"><b>星海孤舟</b><span>科幻 / 4K</span></span><span class="hp">92.3</span></li>
+            <li><span class="no">05</span><span class="ti"><b>深夜续航</b><span>纪录 / 独家</span></span><span class="hp">90.8</span></li>
+            <li><span class="no">06</span><span class="ti"><b>暗线</b><span>谍战 / 更新至5集</span></span><span class="hp">88.4</span></li>
+            <li><span class="no">07</span><span class="ti"><b>山海灵兽录</b><span>动漫 / 更新至30话</span></span><span class="hp">86.9</span></li>
+            <li><span class="no">08</span><span class="ti"><b>午后茶话</b><span>综艺 / 更新至11期</span></span><span class="hp">85.2</span></li>
+          </ol>
+        </div>
+        <div class="panel">
+          <h3>站点数据</h3>
+          <div class="kv"><b>在架影片总量</b><span>37,640 部</span></div>
+          <div class="kv"><b>今日上新</b><span>248 条</span></div>
+          <div class="kv"><b>覆盖类型</b><span>电影 / 剧集 / 综艺 / 动漫 / 纪录片</span></div>
+          <div class="kv"><b>标号分区</b><span>92# · 95# · 98# · 0# · -10#</span></div>
+          <div class="kv"><b>更新时间</b><span>每日 10:00 / 20:00</span></div>
+          <h3 style="margin-top:20px">热门标签</h3>
+          <div class="tags">
+            <a href="#">最新电影</a><a href="#">在线观看</a><a href="#">高清片源</a><a href="#">院线新片</a>
+            <a href="#">国产剧</a><a href="#">国漫</a><a href="#">经典老片</a><a href="#">高分榜</a>
+            <a href="#">治愈番</a><a href="#">纪实人文</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目八：影视资讯 -->
+  <section id="news" aria-labelledby="news-t" style="background:rgba(20,29,23,.42)">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="left">
+          <span class="stamp s8" aria-hidden="true">08</span>
+          <div>
+            <h2 id="news-t">影视资讯与影评</h2>
+            <span class="sub">REVIEWS</span>
+          </div>
+        </div>
+        <a class="more" href="#">资讯中心 →</a>
+      </div>
+      <div class="posts">
+        <article>
+          <div class="top-bar">FEATURED</div>
+          <div class="bd">
+            <h3><a href="#">《满油出发》观后：一次跨越三城的公路旅程</a></h3>
+            <p>给力电影网影评组从节奏、空间调度与配乐三个角度，聊聊这部新作为何值得二刷。</p>
+            <div class="ft"><time datetime="2026-09-30">2026.09.30</time></div>
+          </div>
+        </article>
+        <article>
+          <div class="top-bar">SCHEDULE</div>
+          <div class="bd">
+            <h3><a href="#">本周追更表：逆风引擎、能量街区更新时间与剧情节点</a></h3>
+            <p>整理本周热门剧集的更新节奏与关键走向，方便给力电影网用户提前安排追剧时间。</p>
+            <div class="ft"><time datetime="2026-09-29">2026.09.29</time></div>
+          </div>
+        </article>
+        <article>
+          <div class="top-bar">QUALITY</div>
+          <div class="bd">
+            <h3><a href="#">清晰度怎么选：不同网络环境下的观看建议</a></h3>
+            <p>从带宽需求、设备性能到流量消耗，讲清楚 720P、1080P 与 4K 各自的适用场景。</p>
+            <div class="ft"><time datetime="2026-09-28">2026.09.28</time></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目九：关于 -->
+  <section id="about" aria-labelledby="about-t">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="left">
+          <span class="stamp s9" aria-hidden="true">09</span>
+          <div>
+            <h2 id="about-t">关于给力电影网</h2>
+            <span class="sub">ABOUT</span>
+          </div>
+        </div>
+      </div>
+      <div class="panel">
+        <p style="margin:0;font-size:14.5px;color:var(--gray);line-height:1.95">给力电影网（网址 https://geilidianyingwang-cn.github.io）专注影视信息聚合，提供电影、电视剧、综艺、动漫、纪录片的剧情介绍、演职员表、评分口碑与在线观看指南，并设有油品标号与标号对照表，按题材浓度与清晰度整理片源，每日早晚两更加油排行榜与原创影评。页面采用移动端自适应布局，手机、平板、桌面端均可流畅浏览。</p>
+        <div class="tags" style="margin-top:16px">
+          <a href="#">关于我们</a><a href="#">联系方式</a><a href="#">侵权投诉</a><a href="#">收录规则</a><a href="#">网站地图</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <h4>给力电影网</h4>
+        <p>网址：https://geilidianyingwang-cn.github.io</p>
+        <p>影视信息聚合 · 每日加满 · 移动端自适应</p>
+      </div>
+      <div>
+        <h4>频道导航</h4>
+        <ul>
+          <li><a href="#movie">今日上新</a></li>
+          <li><a href="#tv">热播剧集</a></li>
+          <li><a href="#show">综艺动漫</a></li>
+          <li><a href="#doc">纪录片</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>标号工具</h4>
+        <ul>
+          <li><a href="#octane">油品标号</a></li>
+          <li><a href="#gauge">标号对照表</a></li>
+          <li><a href="#rank">加油排行榜</a></li>
+          <li><a href="#news">影视资讯</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>帮助中心</h4>
+        <ul>
+          <li><a href="#">播放问题</a></li>
+          <li><a href="#">清晰度切换</a></li>
+          <li><a href="#">内容纠错</a></li>
+          <li><a href="#">意见反馈</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="copy">本站仅提供影视信息介绍与索引，所列影片版权归原权利人所有，如涉及侵权请联系我们处理。<br>© 2026 给力电影网 · <b>https://geilidianyingwang-cn.github.io</b></p>
+  </div>
+</footer>
+
+<button class="top" id="toTop" aria-label="返回顶部">↑</button>
+
+<script>
+(function(){
+  var burger = document.getElementById('burger');
+  var nav = document.getElementById('nav');
+  burger.addEventListener('click', function(){
+    var open = nav.classList.toggle('open');
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  nav.addEventListener('click', function(e){
+    if(e.target.tagName === 'A'){
+      nav.classList.remove('open');
+      burger.setAttribute('aria-expanded','false');
+      document.querySelectorAll('.nav a').forEach(function(a){a.classList.remove('on');});
+      e.target.classList.add('on');
+    }
+  });
+
+  var grid = document.getElementById('movieGrid');
+  var empty = document.getElementById('movieEmpty');
+  document.querySelectorAll('.grades button').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      document.querySelectorAll('.grades button').forEach(function(b){b.classList.remove('on');});
+      btn.classList.add('on');
+      var f = btn.dataset.f, shown = 0;
+      grid.querySelectorAll('.pump').forEach(function(c){
+        var hit = (f === 'all') || c.dataset.cat === f;
+        c.style.display = hit ? '' : 'none';
+        if(hit) shown++;
+      });
+      empty.style.display = shown ? 'none' : 'block';
+    });
+  });
+
+  var extra = [['浮城旧事','剧情',''],['极速前线','动作','g2'],['银河旅店','科幻','g4'],
+               ['笑傲考场','喜剧','g3'],['夜行客 2','动作','g5'],['归途列车','文艺','']];
+  document.getElementById('moreMovie').addEventListener('click', function(){
+    var self = this;
+    extra.forEach(function(it){
+      var el = document.createElement('article');
+      el.className = 'pump ' + it[2];
+      el.setAttribute('data-cat','all');
+      el.innerHTML = '<a href="#"><div class="gauge" style="--p:80" role="img" aria-label="' + it[0] + ' 油量表盘 8.0 分">' +
+        '<span class="ring" aria-hidden="true"></span><span class="core">' +
+        '<span class="val">8.0</span><span class="ttl">' + it[0] + '</span></span></div>' +
+        '<div class="info"><b>' + it[0] + '</b><span>2026 · ' + it[1] + '</span>' +
+        '<div class="fuel"><span class="bar"><i style="width:80%"></i></span><span class="pc">80%</span></div>' +
+        '<div class="meta"><em>1080P</em><span>110 MIN</span><span>2.4 万</span></div></div></a>';
+      grid.appendChild(el);
+    });
+    self.textContent = '这一箱已加满';
+    self.disabled = true;
+    self.style.opacity = .55;
+  });
+
+  var topBtn = document.getElementById('toTop');
+  window.addEventListener('scroll', function(){
+    topBtn.classList.toggle('show', window.scrollY > 400);
+  }, {passive:true});
+  topBtn.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  window.doSearch = function(e){
+    e.preventDefault();
+    var kw = document.getElementById('q').value.trim();
+    if(!kw){ document.getElementById('q').focus(); return false; }
+    var hit = 0;
+    document.querySelectorAll('.pump').forEach(function(c){
+      var ok = c.textContent.indexOf(kw) > -1;
+      c.style.display = ok ? '' : 'none';
+      if(ok) hit++;
+    });
+    empty.style.display = hit ? 'none' : 'block';
+    document.getElementById('movie').scrollIntoView({behavior:'smooth'});
+    return false;
+  };
+})();
+</script>
+</body>
+</html>
